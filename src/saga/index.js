@@ -1,5 +1,5 @@
 import { takeEvery, all } from 'redux-saga/effects'
-import { ACTION_ADD_MEMBER_REQUEST, ACTION_EDIT_MEMBER_REQUEST, ACTION_REMOVE_MEMBER_REQUEST } from '../actionType'
+import { ACTION_ADD_MEMBER_REQUEST, ACTION_EDIT_MEMBER_REQUEST, ACTION_REMOVE_MEMBER_REQUEST } from './actionType'
 import { actionAddMembers, actionEditMembers, actionRemoveMembers } from './member.action'
 
 function* watchAddMembersAction() {

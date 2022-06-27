@@ -1,11 +1,27 @@
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
-import CustomButton from '../../components/CustomButton/CustomButton'
+import { Button } from "@rneui/themed";
+import { FONT_FAMILY } from '../../constant';
+import colors from '../../common/colors';
 
 const OnBoarding = ({ navigation }) => {
   return (
-    <View>
-      <CustomButton title='Get Started' onPress={() => navigation.replace('Home')} />
+    <View style={{ flex: 1, justifyContent: 'center', padding: 20, backgroundColor: colors.COLORS.BACKGROUND }}>
+      <Button
+        title="Get Started"
+        loading={false}
+        loadingProps={{ size: 'small', color: 'white' }}
+        buttonStyle={{
+          backgroundColor: colors.COLORS.PRIMARY,
+          borderRadius: 5,
+        }}
+        titleStyle={{  fontSize: 23, fontFamily: FONT_FAMILY }}
+        containerStyle={{
+          height: 50,
+          marginVertical: 10,
+        }}
+        onPress={() => navigation.replace('Home')}
+      />
     </View>
   )
 }

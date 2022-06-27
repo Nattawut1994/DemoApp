@@ -1,9 +1,8 @@
-import {ACTION_ADD_MEMBER, ACTION_EDIT_MEMBER, ACTION_REMOVE_MEMBER} from '../actionType';
+import {ACTION_ADD_MEMBER, ACTION_EDIT_MEMBER, ACTION_REMOVE_MEMBER} from './actionType';
 
 const initialState = {
   members: [],
-  isLoading: true,
-  test: '1234',
+  isLoading: true
 };
 
 export default (state = initialState, {type, payload}) => {

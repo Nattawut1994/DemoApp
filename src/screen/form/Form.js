@@ -1,24 +1,24 @@
 import React from 'react';
-import {Text, View, TextInput, Button, Alert, StyleSheet} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
-import {useForm, Controller} from 'react-hook-form';
-import {yupResolver} from '@hookform/resolvers/yup';
+import { View, StyleSheet } from 'react-native';
+import { Button } from "@rneui/themed";
+import { useDispatch, useSelector } from 'react-redux';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
 import CustomInput from '../../components/CustomInput/CustomInput';
-import CustomButton from '../../components/CustomButton/CustomButton';
 import {
   ACTION_ADD_MEMBER_REQUEST,
   ACTION_EDIT_MEMBER_REQUEST,
-} from '../../actionType';
-import {PASSPORT_REGEX, PHONE_REGEX} from '../../constant';
+} from '../../saga/actionType';
+import { FONT_FAMILY, PASSPORT_REGEX, PHONE_REGEX } from '../../constant';
+import colors from '../../common/colors';
 
-const Form = ({route, navigation}) => {
+const Form = ({ route, navigation }) => {
   const dispatch = useDispatch();
-  const action = (type, payload) => dispatch({type, payload});
-  const memberReducer = useSelector(({memberReducer}) => memberReducer);
-
-  const {item, type} = route.params;
+  const action = (type, payload) => dispatch({ type, payload });
+  const memberReducer = useSelector(({ memberReducer }) => memberReducer);
+  const { item, type } = route.params;
 
   const onSubmit = data => {
     return type === 'ADD' ? createUser(data) : updateUser(data);
@@ -71,37 +71,52 @@ const Form = ({route, navigation}) => {
   const {
     control,
     handleSubmit,
-    formState: {errors},
-  } = useForm({resolver: yupResolver(validationSchema)});
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(validationSchema) });
   console.log(errors);
 
   return (
     <View style={styles.container}>
-      <CustomInput
-        inputTitle="ชื่อ"
-        name="firstname"
-        placeholder={item?.firstname ? item.firstname : 'ชื่อ'}
-        control={control}
-      />
-      <CustomInput
-        inputTitle="นามสกุล"
-        name="lastname"
-        placeholder={item?.lastname ? item.lastname : 'นามสกุล'}
-        control={control}
-      />
-      <CustomInput
-        inputTitle="เลขบัตรประชาชน"
-        name="idcard"
-        placeholder={item?.idcard ? item.idcard : 'เลขบัตรประชาชน'}
-        control={control}
-      />
-      <CustomInput
-        inputTitle="เบอร์โทรศัพท์"
-        name="phone"
-        placeholder={item?.phone ? item.phone : 'เบอร์โทรศัพท์'}
-        control={control}
-      />
-      <CustomButton title="ยืนยัน" onPress={handleSubmit(onSubmit)} />
+      <View>
+        <CustomInput
+          inputTitle="ชื่อ"
+          name="firstname"
+          placeholder={item?.firstname ? item.firstname : 'ชื่อ'}
+          control={control}
+        />
+        <CustomInput
+          inputTitle="นามสกุล"
+          name="lastname"
+          placeholder={item?.lastname ? item.lastname : 'นามสกุล'}
+          control={control}
+        />
+        <CustomInput
+          inputTitle="เลขบัตรประชาชน"
+          name="idcard"
+          placeholder={item?.idcard ? item.idcard : 'เลขบัตรประชาชน'}
+          control={control}
+        />
+        <CustomInput
+          inputTitle="เบอร์โทรศัพท์"
+          name="phone"
+          placeholder={item?.phone ? item.phone : 'เบอร์โทรศัพท์'}
+          control={control}
+        />
+      </View>
+      <View>
+        <Button
+          title="ยืนยัน"
+          loading={false}
+          loadingProps={{ size: 'small', color: 'white' }}
+          buttonStyle={{
+            backgroundColor: colors.COLORS.PRIMARY,
+            borderRadius: 5,
+          }}
+          titleStyle={styles.btnTitle}
+          containerStyle={{ paddingTop: 20 }}
+          onPress={handleSubmit(onSubmit)}
+        />
+      </View>
     </View>
   );
 };
@@ -110,10 +125,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
+    justifyContent: 'space-between',
+    backgroundColor: colors.COLORS.BACKGROUND,
   },
+  btnTitle: {
+    fontSize: 16,
+    fontFamily: FONT_FAMILY,
+    color: colors.COLORS.TEXT_WHITE
+  }
 });
 
 export default Form;

@@ -1,1 +1,3 @@
-export {default} from './CustomInput';
+import CustomInput from './CustomInput';
+
+export default CustomInput

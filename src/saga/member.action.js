@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { put, delay } from 'redux-saga/effects'
-import { ACTION_ADD_MEMBER, ACTION_EDIT_MEMBER, ACTION_REMOVE_MEMBER } from '../actionType'
+import { ACTION_ADD_MEMBER, ACTION_EDIT_MEMBER, ACTION_REMOVE_MEMBER } from './actionType'
 
 export function* actionAddMembers({ payload }) {
   // yield delay(1000)
