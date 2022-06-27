@@ -1,4 +1,4 @@
-import {ACTION_ADD_MEMBER, ACTION_EDIT_MEMBER, ACTION_REMOVE_MEMBER} from './actionType';
+import { ACTION_ADD_MEMBER, ACTION_EDIT_MEMBER, ACTION_REMOVE_MEMBER } from "../saga/actionType";
 
 const initialState = {
   members: [],

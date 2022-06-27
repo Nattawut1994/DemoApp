@@ -10,11 +10,11 @@ import { applyMiddleware, createStore } from 'redux';
 import reducer from './src/reducers';
 import createSagaMiddleware from '@redux-saga/core';
 import rootSaga from './src/saga';
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const sagaMiddleware = createSagaMiddleware()
-const store = createStore(reducer, applyMiddleware(sagaMiddleware, logger))
+const store = createStore(reducer, applyMiddleware(sagaMiddleware))
 
 sagaMiddleware.run(rootSaga)
 

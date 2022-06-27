@@ -73,7 +73,6 @@ const Form = ({ route, navigation }) => {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(validationSchema) });
-  console.log(errors);
 
   return (
     <View style={styles.container}>
