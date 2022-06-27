@@ -61,7 +61,8 @@ const Form = ({ route, navigation }) => {
     lastname: Yup.string().required('กรุณากรอกนามสกุล'),
     idcard: Yup.string()
       .required('กรุณากรอกเลขบัตรประชาชน')
-      .matches(PASSPORT_REGEX, 'กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง'),
+      .matches(PASSPORT_REGEX, 'กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง')
+      .max(13, 'กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง'),
     phone: Yup.string()
       .required('กรุณากรอกเบอร์โทรศัพท์')
       .matches(PHONE_REGEX, 'กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง')
