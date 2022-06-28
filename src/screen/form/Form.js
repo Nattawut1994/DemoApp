@@ -92,25 +92,25 @@ const Form = ({ route, navigation }) => {
         <CustomInput
           inputTitle="ชื่อ"
           name="firstname"
-          placeholder={item?.firstname ? item.firstname : 'ชื่อ'}
+          placeholder={'ชื่อ'}
           control={control}
         />
         <CustomInput
           inputTitle="นามสกุล"
           name="lastname"
-          placeholder={item?.lastname ? item.lastname : 'นามสกุล'}
+          placeholder={'นามสกุล'}
           control={control}
         />
         <CustomInput
           inputTitle="เลขบัตรประชาชน"
           name="idcard"
-          placeholder={item?.idcard ? item.idcard : 'เลขบัตรประชาชน'}
+          placeholder={'เลขบัตรประชาชน'}
           control={control}
         />
         <CustomInput
           inputTitle="เบอร์โทรศัพท์"
           name="phone"
-          placeholder={item?.phone ? item.phone : 'เบอร์โทรศัพท์'}
+          placeholder={'เบอร์โทรศัพท์'}
           control={control}
         />
       </View>
