@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Button } from "@rneui/themed";
 
 import { ACTION_REMOVE_MEMBER_REQUEST } from '../../saga/actionType';
-import { FONT_FAMILY } from '../../constant';
+import { FONT_FAMILY_LIGHT, FONT_FAMILY_REGULAR } from '../../constant';
 import colors from '../../common/colors';
 
 const Home = ({ navigation }) => {
@@ -31,7 +31,7 @@ const Home = ({ navigation }) => {
     <Card containerStyle={styles.cardTitle}>
       <Card.Title
         style={{
-          fontFamily: FONT_FAMILY,
+          fontFamily: FONT_FAMILY_LIGHT,
           fontSize: 22,
           textAlign: 'left',
           fontWeight: 'normal'
@@ -39,11 +39,11 @@ const Home = ({ navigation }) => {
       <Card.Divider />
       <View style={{ marginBottom: 15 }}>
         <View style={{ flexDirection: 'row' }}>
-          <Text style={[styles.cardContent, {color: colors.COLORS.PRIMARY_TEXT_DARK}]}>ID: </Text>
+          <Text style={[styles.cardContent, { fontFamily: FONT_FAMILY_REGULAR, color: colors.COLORS.PRIMARY_TEXT_DARK }]}>ID: </Text>
           <Text style={styles.cardContent}>{item.idcard}</Text>
         </View>
         <View style={{ flexDirection: 'row' }}>
-          <Text style={[styles.cardContent, {color: colors.COLORS.PRIMARY_TEXT_DARK}]}>เบอร์: </Text>
+          <Text style={[styles.cardContent, { fontFamily: FONT_FAMILY_REGULAR, color: colors.COLORS.PRIMARY_TEXT_DARK }]}>เบอร์: </Text>
           <Text style={styles.cardContent}>{item.phone}</Text>
         </View>
       </View>
@@ -100,7 +100,7 @@ const Home = ({ navigation }) => {
   const renderListEmpty = () => {
     return (
       <View style={{ flex: 1, justifyContent: 'center', padding: 20, alignItems: 'center' }}>
-        <Text style={{ fontSize: 16, fontFamily: FONT_FAMILY, color: colors.COLORS.PRIMARY_TEXT_LIGHT }}>คุณยังไม่มีสมาชิก กรุณาเพิ่มสมาชิก</Text>
+        <Text style={{ fontSize: 16, fontFamily: FONT_FAMILY_LIGHT, color: colors.COLORS.PRIMARY_TEXT_LIGHT }}>คุณยังไม่มีสมาชิก กรุณาเพิ่มสมาชิก</Text>
       </View>
     )
   }
@@ -147,12 +147,12 @@ const styles = StyleSheet.create({
   },
   cardContent: {
     fontSize: 16,
-    fontFamily: FONT_FAMILY,
-    color: colors.COLORS.PRIMARY_TEXT_L
+    fontFamily: FONT_FAMILY_LIGHT,
+    color: colors.COLORS.PRIMARY_TEXT_LIGHT
   },
   btnTitle: {
     fontSize: 16,
-    fontFamily: FONT_FAMILY,
+    fontFamily: FONT_FAMILY_REGULAR,
     color: colors.COLORS.TEXT_WHITE
   }
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { Controller } from 'react-hook-form';
-import { FONT_FAMILY } from '../../constant';
+import { FONT_FAMILY_LIGHT, FONT_FAMILY_REGULAR } from '../../constant';
 import colors from '../../common/colors';
 
 const CustomInput = ({ control, inputTitle, name, placeholder, secureTextEntry }) => {
@@ -33,7 +33,7 @@ const CustomInput = ({ control, inputTitle, name, placeholder, secureTextEntry }
           </View>
 
           {error && (
-            <Text style={{ color: 'red', alignSelf: 'stretch', fontFamily: FONT_FAMILY }}>
+            <Text style={{ color: 'red', alignSelf: 'stretch', fontFamily: FONT_FAMILY_LIGHT }}>
               {error.message || 'Error'}
             </Text>
           )}
@@ -56,12 +56,13 @@ const styles = StyleSheet.create({
   inputTitle: {
     textAlign: 'left',
     fontSize: 18,
-    fontFamily: FONT_FAMILY,
+    fontFamily: FONT_FAMILY_REGULAR,
     color: colors.COLORS.PRIMARY_TEXT_DARK,
   },
   inputContent: {
+    height: 40,
     fontSize: 14,
-    fontFamily: FONT_FAMILY,
+    fontFamily: FONT_FAMILY_LIGHT,
     color: colors.COLORS.PRIMARY_TEXT
   }
 });

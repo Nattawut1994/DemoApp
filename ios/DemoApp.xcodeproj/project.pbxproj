@@ -13,6 +13,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-DemoApp-DemoAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-DemoApp-DemoAppTests.a */; };
+		7F912B79286AD31A004C7100 /* Kanit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F912B77286AB36F004C7100 /* Kanit-Light.ttf */; };
+		7F912B80286AEA12004C7100 /* Kanit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F912B7E286AE76C004C7100 /* Kanit-Regular.ttf */; };
+		7F912B81286AEA18004C7100 /* Kanit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F912B7F286AE772004C7100 /* Kanit-Bold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		5709B34CF0A7D63546082F79 /* Pods-DemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.release.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-DemoApp-DemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp-DemoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DemoApp-DemoAppTests/Pods-DemoApp-DemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-DemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F912B77286AB36F004C7100 /* Kanit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Kanit-Light.ttf"; path = "../../assets/fonts/Kanit-Light.ttf"; sourceTree = "<group>"; };
+		7F912B7E286AE76C004C7100 /* Kanit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Kanit-Regular.ttf"; path = "../../../../Downloads/Kanit/Kanit-Regular.ttf"; sourceTree = "<group>"; };
+		7F912B7F286AE772004C7100 /* Kanit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Kanit-Bold.ttf"; path = "../../../../Downloads/Kanit/Kanit-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DemoApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-DemoApp-DemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp-DemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-DemoApp-DemoAppTests/Pods-DemoApp-DemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -106,6 +112,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7F912B76286AB34C004C7100 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F912B7F286AE772004C7100 /* Kanit-Bold.ttf */,
+				7F912B7E286AE76C004C7100 /* Kanit-Regular.ttf */,
+				7F912B77286AB36F004C7100 /* Kanit-Light.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +132,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				7F912B76286AB34C004C7100 /* Resources */,
 				13B07FAE1A68108700A75B9A /* DemoApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* DemoAppTests */,
@@ -242,6 +259,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F912B81286AEA18004C7100 /* Kanit-Bold.ttf in Resources */,
+				7F912B80286AEA12004C7100 /* Kanit-Regular.ttf in Resources */,
+				7F912B79286AD31A004C7100 /* Kanit-Light.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

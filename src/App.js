@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import HomeScreen from './screen/home/Home';
 import FormScreen from './screen/form/Form';
 import OnBoardingScreen from './screen/onboarding/OnBoarding';
-import { FONT_FAMILY } from './constant';
+import { FONT_FAMILY_BOLD, FONT_FAMILY_LIGHT, FONT_FAMILY_REGULAR } from './constant';
 import colors from './common/colors';
 
 const Stack = createNativeStackNavigator();
@@ -81,7 +81,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   title: {
-    fontFamily: FONT_FAMILY,
+    fontFamily: FONT_FAMILY_REGULAR,
     fontSize: 22,
     color: colors.COLORS.PRIMARY_TEXT_DARK
   }

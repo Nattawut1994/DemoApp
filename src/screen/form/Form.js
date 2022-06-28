@@ -11,7 +11,7 @@ import {
   ACTION_ADD_MEMBER_REQUEST,
   ACTION_EDIT_MEMBER_REQUEST,
 } from '../../saga/actionType';
-import { FONT_FAMILY, PASSPORT_REGEX, PHONE_REGEX } from '../../constant';
+import { FONT_FAMILY_LIGHT, FONT_FAMILY_REGULAR, PASSPORT_REGEX, PHONE_REGEX } from '../../constant';
 import colors from '../../common/colors';
 
 const Form = ({ route, navigation }) => {
@@ -62,6 +62,7 @@ const Form = ({ route, navigation }) => {
     idcard: Yup.string()
       .required('กรุณากรอกเลขบัตรประชาชน')
       .matches(PASSPORT_REGEX, 'กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง')
+      .min(13, 'กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง')
       .max(13, 'กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง'),
     phone: Yup.string()
       .required('กรุณากรอกเบอร์โทรศัพท์')
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
   },
   btnTitle: {
     fontSize: 16,
-    fontFamily: FONT_FAMILY,
+    fontFamily: FONT_FAMILY_REGULAR,
     color: colors.COLORS.TEXT_WHITE
   }
 });

@@ -1,7 +1,7 @@
 import { View } from 'react-native'
 import React from 'react'
 import { Button } from "@rneui/themed";
-import { FONT_FAMILY } from '../../constant';
+import { FONT_FAMILY_REGULAR } from '../../constant';
 import colors from '../../common/colors';
 
 const OnBoarding = ({ navigation }) => {
@@ -15,7 +15,7 @@ const OnBoarding = ({ navigation }) => {
           backgroundColor: colors.COLORS.PRIMARY,
           borderRadius: 5,
         }}
-        titleStyle={{  fontSize: 23, fontFamily: FONT_FAMILY }}
+        titleStyle={{  fontSize: 23, fontFamily: FONT_FAMILY_REGULAR }}
         containerStyle={{
           height: 50,
           marginVertical: 10,
