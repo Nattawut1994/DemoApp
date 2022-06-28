@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Button } from "@rneui/themed";
 import { useDispatch, useSelector } from 'react-redux';
@@ -69,8 +69,19 @@ const Form = ({ route, navigation }) => {
       .max(10, 'กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง'),
   });
 
+  useEffect(() => {
+    if (type === 'EDIT') {
+      setValue('firstname', item.firstname)
+      setValue('lastname', item.lastname)
+      setValue('idcard', item.idcard)
+      setValue('phone', item.phone)
+    }
+  }, [])
+
+
   const {
     control,
+    setValue,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(validationSchema) });
